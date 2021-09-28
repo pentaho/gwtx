@@ -23,10 +23,26 @@
   <version>1.5.4-java11</version>
   <name>gwtx</name>
   <description>
+    This is for a temporary fix/fork of gwtx to make capable of operating in JDK 11.  Usage is NOT expected long-term for Pentaho apps.
+
     The goal of GWTx is to provide drop in support for an extended
     set of the of the standard Java library classes on top of what
     is provided by the GWT distribution provided by Google
   </description>
+
+  <scm>
+    <developerConnection>scm:git:git@github.com:pentaho/gwtx.git</developerConnection>
+    <url>https://github.com/pentaho/gwtx</url>
+    <tag>HEAD</tag>
+  </scm>
+
+  <distributionManagement>
+    <repository>
+      <id>pentaho.public.release.repo</id>
+      <name>Pentaho 3rd Party Public Release Repository</name>
+      <url>https://repo.orl.eng.hitachivantara.com/artifactory/pntpub-mvn-3rdparty-orl/</url>
+    </repository>
+  </distributionManagement>
 
   <url>http://code.google.com/p/gwtx/</url>
   <licenses>
@@ -53,12 +69,6 @@
     <gwt.version>2.9.0</gwt.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
-
-  <scm>
-    <connection>scm:svn:http://gwtx.googlecode.com/svn/trunk</connection>
-    <developerConnection>scm:svn:https://gwtx.googlecode.com/svn/trunk</developerConnection>
-    <url>http://code.google.com/p/gwtx/source/browse/</url>
-  </scm>
 
   <build>
     <resources>
@@ -107,12 +117,5 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-
-  <distributionManagement>
-    <repository>
-      <id>people.apache.org</id>
-      <url>scp://people.apache.org/home/nicolas/rsync-to-central/</url>
-    </repository>
-  </distributionManagement>
 
 </project>
